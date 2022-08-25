@@ -1,6 +1,7 @@
 <h2>Products</h2>
 {{products|json}}
 
+
 <ul>
   <li 
   *ngFor="let product of products" 
@@ -8,6 +9,7 @@
     <h3 [class.cher]="product.price>500">{{product.name}}</h3>
     <p *ngIf="product.description">{{product.description}}
     </p>
+    <button type="button" (click)="share()">Share</button>
   </li>
 </ul>
 
